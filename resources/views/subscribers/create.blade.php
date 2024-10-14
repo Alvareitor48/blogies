@@ -1,21 +1,21 @@
 <x-layout meta-title="Subscribe a new subscriber" meta-description="Form to subscribe a new subscriber">
     <h1>{{ __('Subscribe a new subscriber') }}</h1>
 
-    <form method="POST" action="{{ route('posts.store') }}">
+    <form method="POST" action="{{ route('subscribers.store') }}">
         @csrf
         <label>
-            {{ __('Title') }} <br />
-            <input type="text" name="title" value="{{ old('title') }}">
-            @error('title')
+            {{ __('Name') }} <br />
+            <input type="text" name="name" value="{{ old('name') }}">
+            @error('name')
             <br />
             <small style="color: red">{{ $message }}</small>
             @enderror
-        </label>create a new Post
+        </label>
         <br />
         <label>
-            {{ __('Body') }} <br />
-            <textarea name="body">{{ old('body') }}</textarea>
-            @error('body')
+            {{ __('Email') }} <br />
+            <textarea name="email">{{ old('email') }}</textarea>
+            @error('email')
             <br />
             <small style="color: red">{{ $message }}</small>
             @enderror
@@ -24,5 +24,5 @@
         <button type="submit">{{ __('Send') }}</button>
         <br />
     </form>
-    <a href="{{ route('posts.index') }}">{{ __('Back') }}</a>
+    <a href="{{ route('subscribers.index') }}">{{ __('Back') }}</a>
 </x-layout>

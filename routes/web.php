@@ -12,6 +12,8 @@ Route::get('blog/create', [PostController::class, 'create'])->name('posts.create
 Route::post('blog', [PostController::class, 'store'])->name('posts.store');
 Route::get('blog/{post}', [PostController::class, 'show'])->name('posts.show');
 Route::get('subscriber', [SubscriberController::class, 'index'])->name('subscribers.index');
+Route::get('subscriber/create', [SubscriberController::class, 'create'])->name('subscribers.create');
+Route::post('subscriber', [SubscriberController::class, 'store'])->name('subscribers.store');
 Route::view('nosotros', 'about')->name('about');
 
 Route::get('/dashboard', function () {

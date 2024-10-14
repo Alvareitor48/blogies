@@ -14,7 +14,7 @@ class SubscriberController extends Controller
 
     public function create()
     {
-        return view('subscriber.create');
+        return view('subscribers.create');
     }
 
     public function store(Request $request)
@@ -31,6 +31,6 @@ class SubscriberController extends Controller
 
         session()->flash('status', 'subscriber subscribed successfully');
 
-        return to_route('subscriber.index');
+        return to_route('subscribers.index');
     }
 }
